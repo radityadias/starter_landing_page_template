@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --font-poppins: var(--font-poppins);
+
+  --color-background: oklch(1 0 0);
+  --color-foreground: oklch(0.9851 0 0);
+  --color-accent: oklch(0.1448 0 0);
+
+  --color-border-primary: oklch(0.9219 0 0);
+}
+
+@layer base {
+  body {
+    @apply bg-background text-accent lg:overflow-hidden overflow-auto;
+  }
+
+  h1 {
+    @apply text-6xl font-extrabold;
+  }
+
+  h2 {
+    @apply text-3xl font-bold;
+  }
+
+  h3 {
+    @apply text-2xl font-bold;
+  }
+
+  .main-container {
+    @apply w-full mx-auto;
+  }
+}
+
+@layer components {
+  /*  */
+}
+
+@layer utilities {
+  .nav-hover {
+    @apply transition-all duration-300 ease-in-out scale-100 hover:translate-y-[-5px] ;
+  }
+
+}
+
